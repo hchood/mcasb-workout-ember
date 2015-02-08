@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "title": "Exercises set",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "required": ["exercises"],
+  "properties": {
+    "exercises": {
+      "type": "array",
+      "items": {
+        "title": "Exercise",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "description"
+        ]
+      }
+    }
+  }
+}

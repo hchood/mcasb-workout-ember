@@ -38,6 +38,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.3.7)
     arel (6.0.0)
     builder (3.2.2)
     coderay (1.1.0)
@@ -55,6 +56,8 @@ GEM
     hike (1.2.3)
     i18n (0.7.0)
     json (1.8.2)
+    json-schema (2.5.0)
+      addressable (~> 2.3)
     loofah (2.0.1)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -146,6 +149,7 @@ DEPENDENCIES
   active_model_serializers (= 0.8.3)
   factory_girl_rails
   faker
+  json-schema
   pg
   pry-rails
   rails (= 4.2.0)
