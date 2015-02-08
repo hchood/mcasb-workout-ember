@@ -3,7 +3,7 @@ require 'api/v1/exercises_controller'
 
 describe 'Exercises requests' do
   describe 'GET #index' do
-    it 'displays all exercises, ordered by name' do
+    it 'renders json for all exercises, ordered by name' do
       last_exercise = create(:exercise, name: 'Repetiion')
       first_exercise = create(:exercise, name: 'Centers')
       middle_exercise = create(:exercise, name: 'Imagination Box')
@@ -14,7 +14,7 @@ describe 'Exercises requests' do
 
       get api_v1_exercises_path
 
-      expect(response.status).to eq 200
+      expect(response).to have_http_status(:ok)
       expect(json).to be_json_eq(serialized_exercises)
       expect(response).to match_response_schema('exercises')
     end
