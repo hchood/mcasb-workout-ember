@@ -19,4 +19,15 @@ describe 'Exercises requests' do
       expect(response).to match_response_schema('exercises')
     end
   end
+
+  describe 'GET #show' do
+    it 'renders json for an exercise' do
+      exercise = create(:exercise)
+
+      get api_v1_exercise_path(exercise)
+
+      expect(response).to have_http_status(:ok)
+      expect(response).to match_response_schema(:exercise)
+    end
+  end
 end
