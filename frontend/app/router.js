@@ -6,6 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('exercises', function() {
+    // index route auto-generated
+  });
 });
 
 export default Router;
