@@ -14,3 +14,41 @@ exercise_attrs.each do |attrs|
     puts "Exercise '#{attrs[:name]}' created."
   end
 end
+
+exercises = Exercise.all
+
+workout_attrs = [
+  {
+    name: 'Vocal warmup',
+    description: 'A series of Linklater exercises.',
+    exercises: [exercises.first, exercises.last] },
+  {
+    name: 'Physical warmup',
+    description: 'Relaxation exercises.',
+    exercises: [exercises[1], exercises.last]
+  },
+  {
+    name: 'Imagination',
+    description: 'Three Chekhov imagination exercises.',
+    exercises: exercises
+  }
+]
+
+workout_attrs.each do |attrs|
+  details = {
+    name: attrs[:name],
+    description: attrs[:description]
+  }
+  workout = Workout.find_by(details)
+
+  if workout.present?
+    puts "Workout '#{attrs[:name]}' already in the database."
+  else
+    puts "Workout '#{attrs[:name]}' created."
+    workout = Workout.create(details)
+
+    attrs[:exercises].map do |exercise|
+      WorkoutExercise.create(workout: workout, exercise: exercise)
+    end
+  end
+end
