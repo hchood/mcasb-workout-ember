@@ -31,7 +31,7 @@ test('Should allow navigation to the exercises page from the landing page', func
   });
 
   andThen(function() {
-    equal(find('h3').text(), 'All Exercises');
+    equal(find('h3').text(), 'Exercises');
   });
 });
 
