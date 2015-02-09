@@ -7,7 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('exercises', function() {
-    // index route auto-generated
+    this.route('show', { path: ':id' });
   });
 });
 
