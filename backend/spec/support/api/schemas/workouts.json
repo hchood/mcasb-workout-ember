@@ -19,12 +19,19 @@
           },
           "description": {
             "type": "string"
+          },
+          "exercise_ids": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
           }
         },
         "required": [
           "id",
           "name",
-          "description"
+          "description",
+          "exercise_ids"
         ]
       }
     }

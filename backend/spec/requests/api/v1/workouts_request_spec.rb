@@ -19,4 +19,17 @@ describe 'Workouts requests' do
       expect(response).to match_response_schema('workouts')
     end
   end
+
+  describe 'GET #show' do
+    it 'renders json for an workout' do
+      workout = create(:workout)
+      workout_exercises = create_list(:workout_exercise, 3, workout: workout)
+      exercises = workout_exercises.collect { |we| we.exercise }
+
+      get api_v1_workout_path(workout)
+
+      expect(response).to have_http_status(:ok)
+      expect(response).to match_response_schema(:workout)
+    end
+  end
 end

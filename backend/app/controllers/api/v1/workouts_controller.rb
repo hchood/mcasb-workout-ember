@@ -4,4 +4,10 @@ class Api::V1::WorkoutsController < ApplicationController
 
     render json: workouts
   end
+
+  def show
+    workout = Workout.includes(:exercises).find(params[:id])
+
+    render json: workout, include: [:exercises]
+  end
 end
