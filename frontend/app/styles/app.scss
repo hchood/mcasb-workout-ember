@@ -1,10 +1,18 @@
 @import "settings";
 @import "foundation";
 
+body {
+  background-color: $light-bg-color;
+}
+
 #content {
-  background-color: white;
+  background-color: $white;
   border: 1px solid $border-color;
   padding: 1em 2em;
+}
+
+.exercises {
+
 }
 
 .exercise {
@@ -12,5 +20,9 @@
   padding: 1em;
   border: 1px solid $border-color;
   border-radius: 5px;
-  background-color: $light-bg-color;
+  background-color: $silver;
+}
+
+.full-top-bar {
+  border-bottom: 1px solid $border-color;
 }
