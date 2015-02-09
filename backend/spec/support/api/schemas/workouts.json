@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "title": "Workouts set",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "required": ["workouts"],
+  "properties": {
+    "workouts": {
+      "type": "array",
+      "items": {
+        "title": "Workout",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "exercise_ids": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "description",
+          "exercise_ids"
+        ]
+      }
+    }
+  }
+}
