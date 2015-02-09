@@ -11,10 +11,6 @@ body {
   padding: 1em 2em;
 }
 
-.exercises {
-
-}
-
 .exercise {
   margin: 0.5em 0;
   padding: 1em;
@@ -24,5 +20,9 @@ body {
 }
 
 .full-top-bar {
+  border-bottom: 1px solid $border-color;
+}
+
+.exercise-title {
   border-bottom: 1px solid $border-color;
 }
