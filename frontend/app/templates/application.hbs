@@ -1,5 +1,29 @@
-<h2 id="title">Welcome to the MCASB Workout App!</h2>
+<div class="contain-to-grid full-top-bar">
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/">prACTice</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="#"><span>Menu</span></a>
+      </li>
+    </ul>
 
-{{sidebar-nav}}
+    <section class="top-bar-section">
+      <ul class="right">
+        <li>{{link-to 'Exercises' 'exercises.index'}}</li>
+      </ul>
+      <ul class="left">
+        <!-- search stuff can go in here -->
+      </ul>
+    </section>
+  </nav>
+</div>
 
-{{outlet}}
+<div class="row">
+  <div id="small-12 columns">
+    <div id="content">
+      {{outlet}}
+    </div>
+  </div>
+</div>

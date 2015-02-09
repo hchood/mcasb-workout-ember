@@ -31,16 +31,16 @@ test('Should allow navigation to the exercises page from the landing page', func
   });
 
   andThen(function() {
-    equal(find('h3').text(), 'All Exercises');
+    equal(find('h3').text(), 'Exercises');
   });
 });
 
-test('visiting /exercises', function() {
+test('It lists each exercise', function() {
   visit('/exercises');
 
   andThen(function() {
-    equal(find('li:contains("Atmosphere")').length, 1);
-    equal(find('li:contains("Centers")').length, 1);
-    equal(find('li:contains("Repetition")').length, 1);
+    equal(find('a:contains("Atmosphere")').length, 1);
+    equal(find('a:contains("Centers")').length, 1);
+    equal(find('a:contains("Repetition")').length, 1);
   });
 });
